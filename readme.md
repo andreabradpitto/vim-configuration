@@ -1,3 +1,9 @@
+# Welcome to my Vim configuration's readme file
+
+### Disclaimer
+
+Currently, `vimrc` comments are in italian. Maybe I will translate them into english in the future.
+
 ### Instructions
 
 1 - Create `.vim` folder inside user's directory (`C:\users\<YOUR_USERNAME>` for Windows or `~/home/<YOUR_USERNAME>` for Linux)
