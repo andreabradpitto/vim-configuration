@@ -1,0 +1,64 @@
+set nocompatible " = set nocp. Disabilita compatibilita vi; posso fare piu cose così. In ogni caso se uso un vimrc, e abilitato di default
+set viminfo+=n~/.vim/viminfo " Specifica la posizione del file (.)viminfo; di default era in ~
+set relativenumber " Mostra i numeri relativi delle righe
+set hidden " Permette di avere del lavoro non salvato in buffer non mostrati sullo schermo
+filetype plugin on
+
+" Comando personalizzato per fare update dei plugin installati + upgrade di vim-plug.
+" In generale il ! non e richiesto per la definizione di un comando
+command! PU PlugUpdate | PlugUpgrade
+
+" Install vim-plug if not found (github.com/junegunn/vim-plug/wiki/tutorial)
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
+
+" Run PlugInstall if there are missing plugins
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync | source $MYVIMRC
+\| endif
+
+" Plugins will be downloaded under the specified directory
+call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
+
+" Declare the list of plugins
+Plug 'junegunn/vim-plug' " Messo per avere il comando help plug-options nella command line di vim
+Plug 'tpope/vim-sensible'
+Plug 'junegunn/seoul256.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+" List ends here. Plugins become visible to Vim after this call
+" Initialize plugin system
+" - Automatically executes `filetype plugin indent on` and `syntax enable`.
+call plug#end()
+" You can revert the settings after the call like so:
+"   filetype indent off   " Disable file-type-specific indentation
+"   syntax off            " Disable syntax highlighting
+
+" Sostituisce il comando `grep` con `rg --vimgrep --smart-case --follow`. rg
+" proviene da ripgrep.
+" set grepprg=rg\ --vimgrep\ --smart-case\ --follow 
+
+" Modifica a background di schema colori seoul256 (dark):
+" Range: 233 (darkest) ~ 239 (lightest)
+" Default: 237
+" let g:seoul256_background = 236
+" colo seoul256
+
+" Imposta schema colori personalizzato:
+" colorscheme seoul256
+
+" Impostazioni Netrw (fil system explorer predefinito di Vim)
+" Queste impostazioni lo fanno assomigliare a NERDTree
+let g:netrw_banner = 0 " Nascondi il banner di aiuto. Per mostralo, premi `I`
+let g:netrw_liststyle = 3 " Stile selezionato. Alterna tra i vari disponibili con `i`
+let g:netrw_browse_split = 4 " Scegli il modo in cui vengono aperte le finestre da Netrw
+let g:netrw_altv = 1
+let g:netrw_winsize = 25 " Percentuale dello schermo dedicata alla finestra di Netrw
+" augroup ProjectDrawer
+"   autocmd!
+"   autocmd VimEnter * :Vexplore " Apri Netrw all'avvio
+" augroup END
+
