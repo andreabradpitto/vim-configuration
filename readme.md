@@ -4,7 +4,7 @@ This repository hosts my Vim configuration file (`vimrc`) that takes care of ins
 
 ## Disclaimer
 
-Currently, `vimrc` comments are in italian. Maybe I will translate them into english in the future.
+Currently, `vimrc` comments are in italian. Maybe I will translate them to english in the future.
 
 ## Instructions
 
