@@ -61,4 +61,3 @@ let g:netrw_winsize = 25 " Percentuale dello schermo dedicata alla finestra di N
 "   autocmd!
 "   autocmd VimEnter * :Vexplore " Apri Netrw all'avvio
 " augroup END
-
