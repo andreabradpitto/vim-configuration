@@ -20,4 +20,4 @@ A good an exhaustive guide on how to use Vim can be found [here](https://github.
 
 ---
 
-PS `:q!` to exit Vim 😉:</li>
+PS `:q!` to exit Vim 😉</li>
