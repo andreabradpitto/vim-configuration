@@ -10,11 +10,13 @@ Currently, `vimrc` comments are in italian. Maybe I will translate them to engli
 
 1 - Move `.vim` folder inside user's directory (`C:\users\<YOUR_USERNAME>` for Windows or `~/home/<YOUR_USERNAME>` for Linux)
 
-2 - [Optional] Before launching Vim, remove any previously created `.viminfo` files. It will be created inside `.vim` by my configuration. Alternatively, you can manually import old data inside the new `viminfo` file
+2 - [Optional] Delete the rest of this repository in order to clean up some space
 
-3 - Launch Vim. It will download all required plugins and change the default/current Vim settings
+3 - [Optional] Before launching Vim, remove any previously created `.viminfo` files. It will be created inside `.vim` by my configuration. Alternatively, you can manually import old data inside the new `viminfo` file
 
-4 - Enjoy!
+4 - Launch Vim. It will download all required plugins and change the default/current Vim settings
+
+5 - Enjoy!
 
 ## Learning Vim
 
