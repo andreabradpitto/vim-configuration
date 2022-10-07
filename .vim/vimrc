@@ -1,5 +1,6 @@
 set nocompatible " = set nocp. Disabilita compatibilita vi; posso fare piu cose così. In ogni caso se uso un vimrc, e abilitato di default
 set viminfo+=n~/.vim/viminfo " Specifica la posizione del file (.)viminfo; di default era in ~
+set number " Mostra i numeri delle righe. Assieme al comando sotto, ottengo la modalita ibrida
 set relativenumber " Mostra i numeri relativi delle righe
 set hidden " Permette di avere del lavoro non salvato in buffer non mostrati sullo schermo
 filetype plugin on
