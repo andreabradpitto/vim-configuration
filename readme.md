@@ -1,5 +1,7 @@
 # Welcome to my Vim configuration's readme file
 
+This repository hosts my Vim configuration file (`vimrc`) that takes care of installing all my plugins and changes some stettings when first launched on a new machine.
+
 ## Disclaimer
 
 Currently, `vimrc` comments are in italian. Maybe I will translate them into english in the future.
