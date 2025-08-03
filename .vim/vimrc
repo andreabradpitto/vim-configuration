@@ -1,12 +1,12 @@
-set nocompatible " = set nocp. Disabilita compatibilita vi; posso fare piu cose così. In ogni caso se uso un vimrc, e abilitato di default
-set viminfo+=n~/.vim/viminfo " Specifica la posizione del file (.)viminfo; di default era in ~
-set number " Mostra i numeri delle righe. Assieme al comando sotto, ottengo la modalita ibrida
-set relativenumber " Mostra i numeri relativi delle righe
-set hidden " Permette di avere del lavoro non salvato in buffer non mostrati sullo schermo
+set nocompatible " Equals set nocp. Disables vi compatibility mode, so that many modern features will be available. When using a vimrc, it gets enabled by default
+set viminfo+=n~/.vim/.viminfo " Specifies .viminfo location; defaults to ~
+set number " Show line numbers. Combined with below setting, I can get the hybrid mode
+set relativenumber " Show relative line numbers
+set hidden " Allows to have unsaved work also on buffers that are currently not shown on screen
 filetype plugin on
 
-" Comando personalizzato per fare update dei plugin installati + upgrade di vim-plug.
-" In generale il ! non e richiesto per la definizione di un comando
+" Custom command to update installed plugins + vim-plug upgrade.
+" In general, the ! is not required for a command definition
 command! PU PlugUpdate | PlugUpgrade
 
 " Install vim-plug if not found (github.com/junegunn/vim-plug/wiki/tutorial)
@@ -24,7 +24,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
 " Declare the list of plugins
-Plug 'junegunn/vim-plug' " Messo per avere il comando help plug-options nella command line di vim
+Plug 'junegunn/vim-plug' " Added to have the `help plug-options` within the Vim command line
 Plug 'tpope/vim-sensible'
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -38,27 +38,26 @@ call plug#end()
 "   filetype indent off   " Disable file-type-specific indentation
 "   syntax off            " Disable syntax highlighting
 
-" Sostituisce il comando `grep` con `rg --vimgrep --smart-case --follow`. rg
-" proviene da ripgrep.
+" Substitutes the `grep` command with `rg --vimgrep --smart-case --follow` (rg stands for ripgrep)
 " set grepprg=rg\ --vimgrep\ --smart-case\ --follow 
 
-" Modifica a background di schema colori seoul256 (dark):
+" Edit to seoul256 (dark) background color scheme:
 " Range: 233 (darkest) ~ 239 (lightest)
 " Default: 237
 " let g:seoul256_background = 236
 " colo seoul256
 
-" Imposta schema colori personalizzato:
+" Set custom color scheme:
 " colorscheme seoul256
 
-" Impostazioni Netrw (fil system explorer predefinito di Vim)
-" Queste impostazioni lo fanno assomigliare a NERDTree
-let g:netrw_banner = 0 " Nascondi il banner di aiuto. Per mostralo, premi `I`
-let g:netrw_liststyle = 3 " Stile selezionato. Alterna tra i vari disponibili con `i`
-let g:netrw_browse_split = 4 " Scegli il modo in cui vengono aperte le finestre da Netrw
+" Netrw (i.e., Vim default file system explorer) settings
+" These settings make Netrw look/behave a bit more like NERDTree
+let g:netrw_banner = 0 " Hide help banner. To show it, press `I`
+let g:netrw_liststyle = 3 " Selected style. Switch the available ones with `i`
+let g:netrw_browse_split = 4 " Choose the way windows get opened by Netrw
 let g:netrw_altv = 1
-let g:netrw_winsize = 25 " Percentuale dello schermo dedicata alla finestra di Netrw
+let g:netrw_winsize = 25 " Screen percentage occupied by Netrw
 " augroup ProjectDrawer
 "   autocmd!
-"   autocmd VimEnter * :Vexplore " Apri Netrw all'avvio
+"   autocmd VimEnter * :Vexplore " Open Netrw at launch
 " augroup END
