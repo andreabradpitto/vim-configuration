@@ -1,4 +1,4 @@
-# Welcome to my Vim configuration's readme file
+# Welcome to [andreabradpitto](https://github.com/andreabradpitto)'s Vim configuration's readme file
 
 <!-- https://stackoverflow.com/a/69523392 -->
 <!-- ![vim-logo](assets/vim-logo.svg) -->
