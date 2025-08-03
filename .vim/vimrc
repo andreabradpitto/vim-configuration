@@ -3,6 +3,7 @@ set viminfo+=n~/.vim/.viminfo " Specifies .viminfo location; defaults to ~
 set number " Show line numbers. Combined with below setting, I can get the hybrid mode
 set relativenumber " Show relative line numbers
 set hidden " Allows to have unsaved work also on buffers that are currently not shown on screen
+set fileformats=unix,dos " Make `vimrc` compatible with Unix and DOS environment. Check line finishers with `:set fileformat?`, and set them with `:set ff=unix | :w`
 filetype plugin on
 
 " Custom command to update installed plugins + vim-plug upgrade.
@@ -39,7 +40,7 @@ call plug#end()
 "   syntax off            " Disable syntax highlighting
 
 " Substitutes the `grep` command with `rg --vimgrep --smart-case --follow` (rg stands for ripgrep)
-" set grepprg=rg\ --vimgrep\ --smart-case\ --follow 
+" set grepprg=rg\ --vimgrep\ --smart-case\ --follow
 
 " Edit to seoul256 (dark) background color scheme:
 " Range: 233 (darkest) ~ 239 (lightest)
