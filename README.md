@@ -4,7 +4,7 @@
 <!-- ![vim-logo](assets/vim-logo.svg) -->
 <p align="center"> <img src="assets/vim-logo.svg" alt="Vim logo" width="128"/> </p>
 
-This repository hosts my Vim configuration file (`vimrc`) that takes care of installing all my plugins, and changes some stettings when first launched on a new machine.
+This repository hosts my Vim configuration file (`vimrc`) that takes care of installing all my plugins, and changes some settings when first launched on a new machine.
 
 ## Instructions
 
@@ -58,3 +58,4 @@ A good an exhaustive guide on how to use Vim can be found within [this GitHub re
 ---
 
 PS `:q!` to exit Vim 😉
+
