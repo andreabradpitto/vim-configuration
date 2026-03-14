@@ -8,7 +8,7 @@ This repository hosts my Vim configuration file (`vimrc`) that takes care of ins
 
 ## Instructions
 
-1 - Move `.vim` folder inside user's directory (`C:\users\<YOUR_USERNAME>` for Windows or `/home/<YOUR_USERNAME>` (alias: `~`) for Linux-based systems)
+1 - Move `.vim` folder inside user's directory (`C:\users\<YOUR_USERNAME>` for Windows or `/home/<YOUR_USERNAME>` (alias: `~`) for Unix-based systems)
 
 > [!WARNING]
 > In case of Windows, rename the `.vim` folder into `vimfiles`.  
